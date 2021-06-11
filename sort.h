@@ -1,10 +1,9 @@
 #ifndef SORT_H
 #define SORT_H
 
-/* -------------------- print.c ---------------------- */
-void print_array(const int *array, size_t size);
-void print_list(const listint_t *list);
-
+/*------------------- LIBRARIES ---------------------- */
+#include <stdio.h>
+#include <stdlib.h>
 
 /* -------------------- STRUCTURES ------------------- */
 /**
@@ -20,5 +19,25 @@ typedef struct listint_s
     struct listint_s *prev;
     struct listint_s *next;
 } listint_t;
+
+/*----------------- MACROS VARIABLES ----------------- */
+#define true (1)
+#define false (!true)
+
+/*----------------- MACROS FUNCTIONS ----------------- */
+#define SWAP(VARIABLE_A, VARIABLE_B, TYPE) \
+    do                                     \
+    {                                      \
+        TYPE _TMP_SWAP = VARIABLE_A;       \
+        VARIABLE_A = VARIABLE_B;           \
+        VARIABLE_B = _TMP_SWAP;            \
+    } while (false)
+
+/* -------------------- print.c ---------------------- */
+void print_array(const int *array, size_t size);
+void print_list(const listint_t *list);
+
+/* ---------------- 0-bubble_sort.c ------------------ */
+void bubble_sort(int *array, size_t size);
 
 #endif /* SORTH_H */
