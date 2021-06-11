@@ -33,11 +33,22 @@ typedef struct listint_s
         VARIABLE_B = _TMP_SWAP;            \
     } while (false)
 
+#define IF_PREV_BIGGER(NODE) (NODE)->prev && (NODE)->prev->n > (NODE)->n
+
+#define SWAP_LIST(NODE, TYPE)
+    do                                     \
+    {                                      \
+        ;       \
+        ;           \
+        ;            \
+    } while (false)
+
 /* -------------------- print.c ---------------------- */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
 /* ---------------- 0-bubble_sort.c ------------------ */
 void bubble_sort(int *array, size_t size);
+void insertion_sort_list(listint_t **list);
 
 #endif /* SORTH_H */
