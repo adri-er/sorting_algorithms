@@ -33,14 +33,22 @@ typedef struct listint_s
         VARIABLE_B = _TMP_SWAP;            \
     } while (false)
 
-#define IF_PREV_BIGGER(NODE) (NODE)->prev && (NODE)->prev->n > (NODE)->n
+#define IF_PREV_BIGGER(NODE) ((NODE)->prev && ((NODE)->prev->n > (NODE)->n))
 
-#define SWAP_LIST(NODE, TYPE)
-    do                                     \
-    {                                      \
-        ;       \
-        ;           \
-        ;            \
+#define SWAP_LIST(HEAD, NODE, TYPE)            \
+    do                                         \
+    {                                          \
+        TYPE PREV = (NODE)->prev;              \
+        if ((NODE)->prev->prev)                \
+            (NODE)->prev->prev->next = (NODE); \
+        else                                   \
+            *HEAD = (NODE);                    \
+        (NODE)->prev->prev = (NODE);           \
+        (NODE)->prev->next = (NODE)->next;     \
+        if ((NODE)->next)                      \
+            (NODE)->next->prev = (NODE)->prev; \
+        (NODE)->prev = PREV->prev;             \
+        (NODE)->next = PREV;                   \
     } while (false)
 
 /* -------------------- print.c ---------------------- */
