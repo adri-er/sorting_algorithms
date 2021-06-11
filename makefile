@@ -5,7 +5,7 @@ LEAK_CHECK:= valgrind
 CFLAGS := -g -std=gnu90 -Wall -pedantic -Werror -Wextra
 VFLAGS := --leak-check=full
 MAIN := 0-main.c
-DMAIN := ./test/
+DMAIN := ./tests/
 SRC := *.c
 RM=rm
 
