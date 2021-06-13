@@ -43,7 +43,6 @@ typedef struct listint_s
     } while (false)
 
 #define IF_PREV_BIGGER(NODE) ((NODE)->prev && ((NODE)->prev->n > (NODE)->n))
-
 #define SWAP_LIST(HEAD, NODE, TYPE)            \
     do                                         \
     {                                          \
@@ -67,5 +66,6 @@ void print_list(const listint_t *list);
 /* ---------------- 0-bubble_sort.c ------------------ */
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
+void selection_sort(int *array, size_t size);
 
 #endif /* SORTH_H */
