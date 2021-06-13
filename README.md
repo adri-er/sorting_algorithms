@@ -17,7 +17,7 @@ build the binary executed and delete
 $ make run MAIN=<name of main file to run>
 ```
 ## Algorithms
- [Bubble sort]() 
+* [Bubble sort](0-bubble_sort.md)
 * [Insertion sort]()
 * [Selection sort]()
 * [Quick sort]()
@@ -25,23 +25,23 @@ $ make run MAIN=<name of main file to run>
 * [Cocktail shaker sort]()
 * [Counting sort]()
 * [Merge sort]()
-* [Heap sort]() 
+* [Heap sort]()
 * [Radix sort]()
 * [Bitonic sort]()
-* [Quick Sort - Hoare Partition scheme]() 
+* [Quick Sort - Hoare Partition scheme]()
 * [Dealer]()
 
 ## Authors ✒️
 <details  style="user-select: none;">
 	<summary>
-		<strong style="cursor: pointer;">Adriana Echeverri</strong> - <a href="https://github.com/adri-er">adri-er</a>
+		<strong style="cursor: pointer;">Adriana Echeverri</strong> - <a href="https://github.com/adri-er" target="_blank">adri-er</a>
 	</summary>
 	<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adri-er&layout=compact&theme=vue&langs_count=6" alt="adri-er github stats"/>
 </details>
 
 <details  style="user-select: none;">
 	<summary>
-		<strong style="cursor: pointer;">Juan David Avila</strong> - <a href="https://github.com/JuanDAC">JuanDAC</a>
+		<strong style="cursor: pointer;">Juan David Avila</strong> - <a href="https://github.com/JuanDAC" target="_blank">JuanDAC</a>
 	</summary>
 	<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JuanDAC&layout=compact&theme=vue&langs_count=6" alt="adri-er github stats"/>
 </details>
