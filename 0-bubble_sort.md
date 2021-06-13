@@ -10,7 +10,7 @@ Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorith
 void bubble_sort(int *array, size_t size)
 ```
 * **Warning**
-	This function makes changes to the matrix it receives
+	This function makes changes to the array it receives
 * **Description**
 	Sorts an array using the bubble sort
 * **Parameters**
