@@ -25,12 +25,21 @@ typedef struct listint_s
 #define false (!true)
 
 /*----------------- MACROS FUNCTIONS ----------------- */
+/**
+ * SWAP - function is used to swap two va riables.
+ * - Parameters
+ * @VARIABLE_A: variable to swap
+ * @VARIABLE_B: variable to swap
+ * @TYPE: type of the variables
+ * - Locals
+ * @TMP_SWAP: temporal variable for to save value
+ */
 #define SWAP(VARIABLE_A, VARIABLE_B, TYPE) \
     do                                     \
     {                                      \
-        TYPE _TMP_SWAP = VARIABLE_A;       \
+        TYPE TMP_SWAP = VARIABLE_A;        \
         VARIABLE_A = VARIABLE_B;           \
-        VARIABLE_B = _TMP_SWAP;            \
+        VARIABLE_B = TMP_SWAP;             \
     } while (false)
 
 #define IF_PREV_BIGGER(NODE) ((NODE)->prev && ((NODE)->prev->n > (NODE)->n))
