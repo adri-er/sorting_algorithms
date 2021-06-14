@@ -1,6 +1,6 @@
 # Sorting Algorithms
 ## Description
-In this repository  a collection of different types of sorting algorithms in c with each big o notation in files
+In this repository a collection of different types of sorting algorithms in C each with files describing their big O notation.
 ## Prerequisites
 * __gcc__ the GNU Compiler Collection is an optimizing compiler 
 * __valgrind__ is a programming tool for memory debugging, memory leak detection, and profiling. 
@@ -21,7 +21,7 @@ $ make run MAIN=<name of main file to run>
 * [Insertion sort]()
 * [Selection sort](2-selection_sort.md)
 * [Quick sort]()
-* [Shell sort - Knuth Sequence]()
+* [Shell sort - Knuth Sequence](100-shell_sort.md)
 * [Cocktail shaker sort]()
 * [Counting sort]()
 * [Merge sort]()
