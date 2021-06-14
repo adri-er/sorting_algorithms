@@ -13,6 +13,10 @@ void insertion_array(int *array, size_t size)
 {
 	int i, j, k;
 
+	if (array == NULL || size < 2)
+	{
+		return;
+	}
 	for (i = 0; i < (int)size; i++)
 	{
 		k = i;
