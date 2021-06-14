@@ -15,9 +15,9 @@
  */
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 /*----------------- MACROS VARIABLES ----------------- */
@@ -32,32 +32,31 @@ typedef struct listint_s
  * @VARIABLE_B: variable to swap
  * @TYPE: type of the variables
  * - Locals
- * @TMP_SWAP: temporal variable for to save value
+ * #TMP_SWAP: temporal variable for to save value
  */
 #define SWAP(VARIABLE_A, VARIABLE_B, TYPE) \
-    do                                     \
-    {                                      \
-        TYPE TMP_SWAP = VARIABLE_A;        \
-        VARIABLE_A = VARIABLE_B;           \
-        VARIABLE_B = TMP_SWAP;             \
-    } while (false)
+	do {                                   \
+		TYPE TMP_SWAP = VARIABLE_A;        \
+		VARIABLE_A = VARIABLE_B;           \
+		VARIABLE_B = TMP_SWAP;             \
+	} while (false)
 
 #define IF_PREV_BIGGER(NODE) ((NODE)->prev && ((NODE)->prev->n > (NODE)->n))
+#define LAST_POSITION(SIZE) ((int)(SIZE) - 1)
 #define SWAP_LIST(HEAD, NODE, TYPE)            \
-    do                                         \
-    {                                          \
-        TYPE PREV = (NODE)->prev;              \
-        if ((NODE)->prev->prev)                \
-            (NODE)->prev->prev->next = (NODE); \
-        else                                   \
-            *HEAD = (NODE);                    \
-        (NODE)->prev->prev = (NODE);           \
-        (NODE)->prev->next = (NODE)->next;     \
-        if ((NODE)->next)                      \
-            (NODE)->next->prev = (NODE)->prev; \
-        (NODE)->prev = PREV->prev;             \
-        (NODE)->next = PREV;                   \
-    } while (false)
+	do {                                       \
+		TYPE PREV = (NODE)->prev;              \
+		if ((NODE)->prev->prev)                \
+			(NODE)->prev->prev->next = (NODE); \
+		else                                   \
+			*HEAD = (NODE);                    \
+		(NODE)->prev->prev = (NODE);           \
+		(NODE)->prev->next = (NODE)->next;     \
+		if ((NODE)->next)                      \
+			(NODE)->next->prev = (NODE)->prev; \
+		(NODE)->prev = PREV->prev;             \
+		(NODE)->next = PREV;                   \
+	} while (false)
 
 /* -------------------- print.c ---------------------- */
 void print_array(const int *array, size_t size);
