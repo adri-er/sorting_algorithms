@@ -11,6 +11,7 @@ RM=rm
 
 betty:
 	@betty $(SRC)
+	@betty *.h
 
 build:
 	@betty $(SRC) \
