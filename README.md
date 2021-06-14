@@ -34,14 +34,14 @@ $ make run MAIN=<name of main file to run>
 ## Authors ✒️
 <details  style="user-select: none;">
 	<summary>
-		<strong style="cursor: pointer;">Adriana Echeverri</strong> - <a href="https://github.com/adri-er" target="_blank">adri-er</a>
+		<strong style="user-select: none;cursor: pointer;">Adriana Echeverri</strong> - <a href="https://github.com/adri-er" target="_blank">adri-er</a>
 	</summary>
 	<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adri-er&layout=compact&theme=vue&langs_count=6" alt="adri-er github stats"/>
 </details>
 
 <details  style="user-select: none;">
 	<summary>
-		<strong style="cursor: pointer;">Juan David Avila</strong> - <a href="https://github.com/JuanDAC" target="_blank">JuanDAC</a>
+		<strong style="user-select: none;cursor: pointer;">Juan David Avila</strong> - <a href="https://github.com/JuanDAC" target="_blank">JuanDAC</a>
 	</summary>
 	<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JuanDAC&layout=compact&theme=vue&langs_count=6" alt="adri-er github stats"/>
 </details>
