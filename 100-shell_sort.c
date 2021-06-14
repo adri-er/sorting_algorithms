@@ -30,10 +30,11 @@ void insertion_array(int *array, size_t size)
 }
 
 /**
- * insertion_array - insertion algorithm applied to an array.
+ * insertion_array_gap - insertion algorithm applied to an array.
  *
  * @array: array to sort with the algorithm.
  * @size: size of the array to sort.
+ * @gap: size of the gap between changes.
  *
  * Return: Always void.
  */
