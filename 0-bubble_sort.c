@@ -1,7 +1,8 @@
 #include "sort.h"
 
+
 /**
- * bubble_sort - sorts an array using the bubble sort
+ * bubble_sort - sorts an array using the bubble sort.
  * algorithm in ascending order.
  * @array: array of numbers to sort.
  * @size: size of the array to sort.
@@ -19,7 +20,7 @@ void bubble_sort(int *array, size_t size)
 	}
 	for (; i >= 0; i--)
 	{
-		for (j = (int)size - 2; j >= ((int)size - i - 1); j--)
+		for (j = LAST_POSITION(size) - 1; j >= (LAST_POSITION(size) - i); j--)
 		{
 			if (array[j] > array[j + 1])
 			{
