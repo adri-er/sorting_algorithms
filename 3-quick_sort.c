@@ -29,12 +29,15 @@ void quick_sort_print(int *array_p, size_t size_p, int *array, size_t size)
 	{
 		if (array[moving] <=  array[pivot])
 		{
-			SWAP(array[moving], array[change], int);
+			if (array[change] !=  array[pivot])
+			{
+				SWAP(array[moving], array[change], int);
+				print_array(array_p, size_p);
+			}
 			change++;
 		}
 	}
 	pivot = change - 1;
-	print_array(array_p, size_p);
 	quick_sort_print(array_p, size_p, array, pivot);
 	quick_sort_print(array_p, size_p, array + pivot + 1, size - pivot - 1);
 }
