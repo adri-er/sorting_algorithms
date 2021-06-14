@@ -13,10 +13,6 @@ void insertion_array(int *array, size_t size)
 {
 	int i, j, k;
 
-	if (array == NULL || size < 2)
-	{
-		return;
-	}
 	for (i = 0; i < (int)size; i++)
 	{
 		k = i;
@@ -76,6 +72,10 @@ void shell_sort(int *array, size_t size)
 {
 	int gap = 1;
 
+	if (array == NULL || size < 2)
+	{
+		return;
+	}
 	while (gap < ((int)size - 1) / 3)
 	{
 		gap = gap * 3 + 1;
