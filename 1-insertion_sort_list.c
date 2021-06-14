@@ -28,7 +28,7 @@ void insertion_sort_list(listint_t **list)
 			if (*list == node_connections[3])
 			{
 				*list = in_node;
-			}	
+			}
 			if (node_connections[3]->prev)
 			{
 				node_connections[3]->prev->next = node_connections[0];
