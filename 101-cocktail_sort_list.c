@@ -10,13 +10,14 @@
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *node = *list, *next_node = NULL, *in_node = NULL;
-	int changes = 0;
+	int changes;
 
 	if (list == NULL || *list == NULL)
 		return;
 
 	for (node = *list; node; node = next_node)
 	{
+		changes = 0;
 		next_node = node->next;
 		for (in_node = *list; in_node;)
 		{
