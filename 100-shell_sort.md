@@ -7,7 +7,7 @@ Donald Shell published the first version of this sort in 1959. The running time 
 |Best Case|Average Case|Worst Case|
 |:--:|:--:|:--:|
 |O(nlogn)|O(n<sup>4/3</sup>)|O(n<sup>3/2</sup>)|
-## Selection sort function
+## Shell sort function
 ```c
 void shell_sort(int *array, size_t size)
 ```
@@ -25,27 +25,38 @@ void shell_sort(int *array, size_t size)
 void shell_sort(int *array, size_t size)
 {
 	int gap = 1;
-	int i;
 
+	if (array == NULL || size < 2)
+	{
+		return;
+	}
 	while (gap < ((int)size - 1) / 3)
 	{
 		gap = gap * 3 + 1;
 	}
-	while (gap > 1)
+	insertion_array_gap(array, size, gap);
+}
+
+void insertion_array_gap(int *array, size_t size, int gap)
+{
+	int i;
+
+	if (gap > 1)
 	{
 		i = size - 1;
 		while (i - gap >= 0)
 		{
-		if (array[i] < array[i - gap])
-		{
-			SWAP(array[i], array[i - gap], int);
-		}
-		i--;
+			if (array[i] < array[i - gap])
+			{
+				SWAP(array[i], array[i - gap], int);
+			}
+			i--;
 		}
 		print_array((const int *)array, size);
 		gap = (gap - 1) / 3;
+		insertion_array_gap(array, size, gap);
 	}
-	if (gap == 1)
+	else if (gap == 1)
 	{
 		insertion_array(array, size);
 		print_array((const int *)array, size);
