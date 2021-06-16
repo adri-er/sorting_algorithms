@@ -1,7 +1,7 @@
 # Cocktail sort
 ## Description
 Also known as bidirectional bubble sort, cocktail sort, shaker sort (which can also refer to a variant of selection sort), ripple sort, shuffle sort, or shuttle sort, is an extension of bubble sort. The algorithm extends bubble sort by operating in two directions. While it improves on bubble sort by more quickly moving items to the beginning of the list, it provides only marginal performance improvements.
-Like most variants of bubble sort, cocktail shaker sort is used primarily as an educational tool. More performant algorithms such as timsort, or merge sort are used by the sorting libraries built into popular programming languages such as Python and Java.
+Like most variants of bubble sort, cocktail shaker sort is used primarily as an educational tool. More performant algorithms such as timsort, or merge sort are used by the sorting libraries built into popular programming languages such as Python and Java. <sub><a  href="https://en.wikipedia.org/wiki/Cocktail_shaker_sort"  target="_blank">more</a></sub> 
 ## Time complexity
 |Best Case|Average Case|Worst Case|
 |:--:|:--:|:--:|

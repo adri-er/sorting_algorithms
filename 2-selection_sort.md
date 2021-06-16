@@ -1,7 +1,7 @@
 # Selection sort
 ## Description
 Selection sort is an in-place comparison sort. It has O(n2) complexity, making it inefficient on large lists, and generally performs worse than the similar insertion sort. Selection sort is noted for its simplicity, and also has performance advantages over more complicated algorithms in certain situations.
-The algorithm finds the minimum value, swaps it with the value in the first position, and repeats these steps for the remainder of the list. It does no more than n swaps, and thus is useful where swapping is very expensive.
+The algorithm finds the minimum value, swaps it with the value in the first position, and repeats these steps for the remainder of the list. It does no more than n swaps, and thus is useful where swapping is very expensive. <sub><a  href="https://en.wikipedia.org/wiki/Selection_sort"  target="_blank">more</a></sub> 
 ## Time complexity
 |Best Case|Average Case|Worst Case|
 |:--:|:--:|:--:|
