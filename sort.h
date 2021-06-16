@@ -41,6 +41,14 @@ typedef struct listint_s
 		VARIABLE_B = TMP_SWAP;             \
 	} while (false)
 
+#define COPY_FROM_UNTIL(FROM, SINCE, TO, START, LAST)\
+	do {                                             \
+		for (; (START) < (LAST); START++, SINCE++)   \
+		{                                            \
+			TO[START] = FROM[SINCE];                 \
+		}                                            \
+	} while (false)
+
 #define IF_PREV_BIGGER(NODE) ((NODE)->prev && ((NODE)->prev->n > (NODE)->n))
 #define LAST_POSITION(SIZE) ((int)(SIZE) - 1)
 #define SWAP_DOUBLE_LIST(NODE, HEAD, TYPE)                         \

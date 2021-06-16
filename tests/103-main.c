@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "sort.h"
+#include "../sort.h"
 
 /**
  * main - Entry point
@@ -14,7 +14,7 @@ int main(void)
 
     print_array(array, n);
     printf("\n");
-    shell_sort(array, n);
+    merge_sort(array, n);
     printf("\n");
     print_array(array, n);
     return (0);
