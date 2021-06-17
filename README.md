@@ -18,7 +18,7 @@ $ make run MAIN=<name of main file to run>
 ```
 ## Algorithms
 * [Bubble sort](0-bubble_sort.md)
-* [Insertion sort]()
+* [Insertion sort](1-insertion_sort_list.md)
 * [Selection sort](2-selection_sort.md)
 * [Quick sort]()
 * [Shell sort - Knuth Sequence](100-shell_sort.md)
