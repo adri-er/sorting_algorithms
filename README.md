@@ -17,14 +17,14 @@ build the binary executed and delete
 $ make run MAIN=<name of main file to run>
 ```
 ## Algorithms
-* [Bubble sort](0-bubble_sort.md)
-* [Insertion sort](1-insertion_sort_list.md)
-* [Selection sort](2-selection_sort.md)
+* [Bubble sort](./documentation/0-bubble_sort.md)
+* [Insertion sort](./documentation/1-insertion_sort_list.md)
+* [Selection sort](./documentation/2-selection_sort.md)
 * [Quick sort]()
-* [Shell sort - Knuth Sequence](100-shell_sort.md)
-* [Cocktail shaker sort](101-cocktail_sort_list.md)
+* [Shell sort - Knuth Sequence](./documentation/100-shell_sort.md)
+* [Cocktail shaker sort](./documentation/101-cocktail_sort_list.md)
 * [Counting sort]()
-* [Merge sort](103-merge_sort.md)
+* [Merge sort](./documentation/103-merge_sort.md)
 * [Heap sort]()
 * [Radix sort]()
 * [Bitonic sort]()

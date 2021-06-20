@@ -1,11 +1,14 @@
 #ifndef SORT_H
 #define SORT_H
-
-/*------------------- LIBRARIES ---------------------- */
+/*---------------------------------------------------- */
+/*-------------------- LIBRARIES --------------------- */
+/*---------------------------------------------------- */
 #include <stdio.h>
 #include <stdlib.h>
 
+/*---------------------------------------------------- */
 /* -------------------- STRUCTURES ------------------- */
+/*---------------------------------------------------- */
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -20,92 +23,27 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
+typedef unsigned char bool;
+
+/*---------------------------------------------------- */
 /*----------------- MACROS VARIABLES ----------------- */
+/*---------------------------------------------------- */
 #define true (1)
 #define false (!true)
 
+/*---------------------------------------------------- */
 /*----------------- MACROS FUNCTIONS ----------------- */
-/**
- * SWAP - function is used to swap two va riables.
- * - Parameters
- * @VARIABLE_A: variable to swap
- * @VARIABLE_B: variable to swap
- * @TYPE: type of the variables
- * - Locals
- * #TMP_SWAP: temporal variable for to save value
- */
-#define SWAP(VARIABLE_A, VARIABLE_B, TYPE) \
-	do {                                   \
-		TYPE TMP_SWAP = VARIABLE_A;        \
-		VARIABLE_A = VARIABLE_B;           \
-		VARIABLE_B = TMP_SWAP;             \
-	} while (false)
+/*---------------------------------------------------- */
 
-#define COPY_FROM_UNTIL(FROM, SINCE, TO, START, LAST)\
-	do {                                             \
-		for (; (START) < (LAST); START++, SINCE++)   \
-		{                                            \
-			TO[START] = FROM[SINCE];                 \
-		}                                            \
-	} while (false)
+#include "macro_functions.h"
 
-#define IF_PREV_BIGGER(NODE) ((NODE)->prev && ((NODE)->prev->n > (NODE)->n))
-#define LAST_POSITION(SIZE) ((int)(SIZE) - 1)
-#define SWAP_DOUBLE_LIST(NODE, HEAD, TYPE)                         \
-	do {                                                           \
-		TYPE node_connections[4];                                  \
-		node_connections[0] = (NODE)->prev->next;                  \
-		node_connections[1] = (NODE)->prev->prev;                  \
-		node_connections[2] = (NODE)->next;                        \
-		node_connections[3] = (NODE)->prev;                        \
-		if (*(HEAD) == node_connections[3])                        \
-		{                                                          \
-			*(HEAD) = (NODE);                                      \
-		}                                                          \
-		if (node_connections[3]->prev)                             \
-		{                                                          \
-			node_connections[3]->prev->next = node_connections[0]; \
-		}                                                          \
-		if ((NODE)->next)                                          \
-		{                                                          \
-			(NODE)->next->prev = node_connections[3];              \
-		}                                                          \
-		node_connections[3]->next = node_connections[2];           \
-		node_connections[3]->prev = node_connections[0];           \
-		(NODE)->next = node_connections[3];                        \
-		(NODE)->prev = node_connections[1];                        \
-	} while (false)
-
-#define SWAP_DOUBLE_LIST_NEXT(NODE, HEAD, TYPE)             \
-	do {                                                    \
-		TYPE node_connections[4];                           \
-		node_connections[0] = (NODE)->prev->next;           \
-		node_connections[1] = (NODE)->next->next;           \
-		node_connections[2] = (NODE)->next;                 \
-		node_connections[3] = (NODE);                       \
-		if (*(HEAD) == NODE)                                \
-		{                                                   \
-			*(HEAD) = node_connections[2];                  \
-		}                                                   \
-		if (NODE->prev)                                     \
-		{                                                   \
-			(NODE)->prev->next = node_connections[2];       \
-		}                                                   \
-		if ((NODE)->next->next)                             \
-		{                                                   \
-			(NODE)->next->next->prev = node_connections[3]; \
-		}                                                   \
-		(NODE)->next->next = node_connections[3];           \
-		(NODE)->next->prev = (NODE)->prev;                  \
-		(NODE)->next = node_connections[1];                 \
-		(NODE)->prev = node_connections[2];                 \
-	} while (false)
-
-/* -------------------- print.c ---------------------- */
+/*---------------------------------------------------- */
+/* ------------------- PROTOTYPES -------------------- */
+/*---------------------------------------------------- */
+/* --> print.c */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
-/* ---------------- 0-bubble_sort.c ------------------ */
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
@@ -113,5 +51,6 @@ void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 void quick_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
+void heap_sort(int *array, size_t size);
 
 #endif /* SORTH_H */
