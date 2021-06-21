@@ -23,7 +23,7 @@ $ make run MAIN=<name of main file to run>
 * [Quick sort]()
 * [Shell sort - Knuth Sequence](./documentation/100-shell_sort.md)
 * [Cocktail shaker sort](./documentation/101-cocktail_sort_list.md)
-* [Counting sort]()
+* [Counting sort](./documentation/102-counting_sort.c)
 * [Merge sort](./documentation/103-merge_sort.md)
 * [Heap sort]()
 * [Radix sort]()
