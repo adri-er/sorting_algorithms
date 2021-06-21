@@ -9,11 +9,12 @@
  */
 void cocktail_sort_list(listint_t **list)
 {
-	listint_t *node = *list, *next_node = NULL, *in_node = NULL;
+	listint_t *node, *next_node = NULL, *in_node = NULL;
 	int changes;
 
 	if (list == NULL || *list == NULL)
 		return;
+	node = *list;
 	for (node = *list; node; node = next_node)
 	{
 		changes = 0;
@@ -21,8 +22,7 @@ void cocktail_sort_list(listint_t **list)
 		for (in_node = *list; in_node;)
 		{
 			if (in_node->next && in_node->next->n < in_node->n)
-			{
-				changes++;
+			{	changes++;
 				SWAP_DOUBLE_LIST_NEXT(in_node, list, listint_t *);
 				print_list((const listint_t *)*list);
 				continue;
